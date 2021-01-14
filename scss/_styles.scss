@@ -60,6 +60,19 @@ a {
 }
 .carousel {
   margin-top: -70px;
+  left: initial;
+}
+.carousel-indicators {
+  left: initial;
+  margin-right: 2.4%;
+  bottom: 42%;
+  li {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    margin-bottom: 14px;
+  }
 }
 .carousel-caption {
   line-height: 51px;
@@ -85,7 +98,25 @@ a {
   }
   > strong {
     font-size: 18px;
-    display: block;
+    position: relative;
+    letter-spacing: -0.4px;
+    &:before,
+    &:after {
+      content: "";
+      height: 1px;
+      width: 28px;
+      background: $teal;
+      position: absolute;
+      bottom: 50%;
+      left: 0;
+      margin-left: -60px;
+    }
+    &:after {
+      left: initial;
+      right: 0;
+      margin-left: initial;
+      margin-right: -60px;
+    }
   }
 }
 .social-icons {
