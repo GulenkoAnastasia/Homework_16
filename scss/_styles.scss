@@ -93,7 +93,7 @@ a {
 
     em {
       font-style: normal;
-      color: $teal;
+      color: $green;
     }
   }
   > strong {
@@ -105,7 +105,7 @@ a {
       content: "";
       height: 1px;
       width: 28px;
-      background: $teal;
+      background: $green;
       position: absolute;
       bottom: 50%;
       left: 0;
@@ -123,6 +123,7 @@ a {
   margin-top: -60px;
   margin-right: 28px;
   position: relative;
+  height: 44px;
   li {
     list-style-type: none;
     margin-right: 12px;
@@ -134,4 +135,78 @@ a {
       }
     }
   }
+}
+.features-wrapper {
+  background: $bg-light;
+}
+h2 {
+  color: $teal;
+  font-weight: $font-weight-bolder;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: $headings-padding-top;
+  padding-bottom: $headings-padding-bottom;
+  letter-spacing: -0.6px;
+}
+h2 + div {
+  position: relative;
+  text-align: center;
+  margin-bottom: $icon-heart-m-bottom;
+  span {
+    color: $icon-heart-color;
+    font-size: 15px;
+  }
+  &:before,
+  &:after {
+    content: "";
+    width: 90px;
+    height: 1px;
+    background-color: $icon-heart-color;
+    position: absolute;
+    left: calc(50% - 116px);
+    bottom: 50%;
+  }
+  &:after {
+    left: initial;
+    right: calc(50% - 116px);
+  }
+}
+.features {
+  padding-top: 23px;
+  span {
+    height: 40px;
+    width: 40px;
+    min-width: 40px;
+    border-radius: 50%;
+    border: 1px solid $teal;
+    display: block;
+    position: relative;
+    margin-right: 17px;
+    &:before {
+      content: "\e904";
+      position: absolute;
+      left: calc(50% - 7px);
+      top: calc(50% - 10px);
+      font-size: 20px;
+    }
+  }
+  .icon-development-icon {
+    &:before {
+      content: "\e908";
+      left: calc(50% - 8px);
+      font-size: 16px;
+      top: calc(50% - 8px);
+    }
+  }
+  .icon-consulting-icon {
+    &:before {
+      content: "\e906";
+      left: calc(50% - 8px);
+      top: calc(50% - 9px);
+    }
+  }
+}
+.ft-block {
+  display: flex;
+  padding-left: 25px;
 }
