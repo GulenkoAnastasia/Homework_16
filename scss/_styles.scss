@@ -50,18 +50,18 @@ a {
       padding: 32px 4px 8px 4px;
       font-size: 16px;
       @include media-breakpoint-up(lg) {
-        border-top: 2px solid transparent;
+        border-top: 2px solid transparent; //*сделала 2px border, 1px не виден*//
         font-size: 13px;
       }
       &:hover {
         @include media-breakpoint-up(lg) {
-          border-top: 2px solid #32b0ee;
+          border-top: 2px solid $nav-hover-border-color;
         }
       }
     }
     .active {
       @include media-breakpoint-up(lg) {
-        border-top: 2px solid #32b0ee;
+        border-top: 2px solid $nav-hover-border-color;
       }
     }
   }
@@ -213,7 +213,7 @@ h2 {
     background-color: $icon-heart-color-dark;
     position: absolute;
     left: calc(50% - 116px);
-    bottom: 50%;
+    bottom: 35%;
   }
   &:after {
     left: initial;
@@ -478,6 +478,9 @@ h2 {
           left: calc(50% - 10px);
           position: absolute;
         }
+        &:hover:before {
+          color: $photo-icon-hover;
+        }
         &.icon-ico-google-plus:before {
           top: calc(50% - 10px) !important;
         }
@@ -526,7 +529,7 @@ h2 {
   span {
     width: 90px;
     height: 90px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border: 2px solid $facts-circle-color;
     display: block;
     border-radius: 50%;
     position: relative;
@@ -660,8 +663,9 @@ h2 {
     &:before {
       font-size: 16px;
       padding-top: 5px;
-      padding-right: 5px;
+      padding-right: 4px;
       display: block;
+      cursor: pointer;
     }
   }
 }
@@ -677,8 +681,11 @@ h2 {
     }
     a {
       &:before {
-        color: #cdd2d6;
+        color: $list-icon-color;
         font-size: 25px;
+      }
+      &:hover:before {
+        color: $teal;
       }
     }
   }
@@ -786,9 +793,9 @@ h2 {
     content: "";
     height: 39px;
     width: 1px;
-    left: 14px;
+    left: 12px;
     top: 76px;
-    background: #177e72;
+    background: $themecurve-line-color;
   }
   a {
     color: $body-color;
@@ -799,9 +806,4 @@ h2 {
   span {
     color: $body-color;
   }
-}
-
-.navbar-nav {
-  // // opacity: 0;
-  // transition: all 1s ease-in-out;
 }
