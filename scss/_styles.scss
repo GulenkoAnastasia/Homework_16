@@ -167,19 +167,29 @@ a {
   margin: -70px 28px 16px 0;
   position: relative;
   height: 44px;
+
   li {
     list-style-type: none;
     margin-right: 12px;
+    padding-top: 1px;
     a {
       opacity: 30%;
 
       &:before {
-        font-size: 18px !important;
+        font-size: 20px !important;
       }
       &:hover {
         opacity: 100%;
       }
     }
+    .icon-ico-dribble {
+      &:before {
+        font-size: 18px !important;
+      }
+    }
+  }
+  .fb {
+    margin-top: -1px;
   }
 }
 .features-wrapper {
@@ -287,6 +297,7 @@ h2 {
     @include media-breakpoint-down(lg) {
       margin-left: 50px;
       margin-bottom: 30px;
+      padding-top: 8px;
     }
   }
 }
@@ -628,10 +639,14 @@ h2 {
   }
 }
 .registration-form {
-  padding-left: 4px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-bottom: 20px;
+
   @include media-breakpoint-up(lg) {
     margin-bottom: 0;
+    padding-left: 4px;
+    padding-right: 0;
   }
   input[type="text"],
   input[type="email"],
@@ -706,11 +721,12 @@ h2 {
   color: $white;
   .logo-footer {
     font-family: $font-family-logo;
-    font-size: 28px;
+    font-size: 32px;
     display: block;
     padding-bottom: 15px;
     @include media-breakpoint-up(lg) {
       padding-bottom: 27px;
+      font-size: 28px;
     }
   }
   a {
@@ -729,16 +745,21 @@ h2 {
     li {
       list-style-type: none;
       margin-bottom: 11px;
+      font-size: 14px;
+      @include media-breakpoint-up(lg) {
+        font-size: 13px;
+      }
     }
   }
   .span-footer {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: $font-weight-bold;
     padding-top: 19px;
     display: block;
     padding-bottom: 15px;
     @include media-breakpoint-up(lg) {
       padding-bottom: 31px;
+      font-size: 14px;
     }
   }
 }
@@ -747,6 +768,12 @@ h2 {
   @include media-breakpoint-up(lg) {
     padding-top: 91px;
     padding-bottom: 94px;
+  }
+  p {
+    font-size: 15px;
+    @include media-breakpoint-up(lg) {
+      font-size: 13px;
+    }
   }
   .input-wrapper {
     position: relative;
@@ -787,21 +814,30 @@ h2 {
 .themecurve {
   position: relative;
   padding-left: 26px;
-  padding-top: 72px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  @include media-breakpoint-up(xl) {
+    padding-top: 72px;
+    padding-bottom: 0;
+  }
   &:before {
     position: absolute;
     content: "";
     height: 39px;
     width: 1px;
     left: 12px;
-    top: 76px;
+    top: 46px;
     background: $themecurve-line-color;
+    @include media-breakpoint-up(xl) {
+      top: 76px;
+    }
   }
   a {
     color: $body-color;
   }
   p {
     margin-bottom: 50px;
+    width: 260px;
   }
   span {
     color: $body-color;
